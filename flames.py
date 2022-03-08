@@ -6,7 +6,7 @@ def flames(name1, name2):
     count = sum(common_letters.values())*2
     offset1 = total - count
     print(offset1)
-    flames_list = ['Friend', 'Love', 'Affection', 'Marriage', 'Enemy', 'Siblings']
+    flames_list = ['Friendship', 'Love', 'Affection', 'Marriage', 'Enemy', 'Siblings']
 
     for i in range(0, 5):
         if offset1 > len(flames_list):
