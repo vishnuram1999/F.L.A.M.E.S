@@ -5,14 +5,16 @@ def flames(name1, name2):
     common_letters = Counter(name1) & Counter(name2)
     count = sum(common_letters.values())*2
     offset1 = total - count
-
+    print(offset1)
     flames_list = ['Friend', 'Love', 'Affection', 'Marriage', 'Enemy', 'Siblings']
 
     for i in range(0, 5):
         if offset1 > len(flames_list):
             offset = offset1 % len(flames_list)
-        if offset1 > len(flames_list) and offset%len(flames_list) == 0:
+        if offset1 >= len(flames_list) and offset1%len(flames_list) == 0:
             offset = len(flames_list)
+        if offset1 < len(flames_list):
+            offset = offset1
         list1 = flames_list[(offset-1)+1:]
         list2 = flames_list[:(offset-1)]
         list1.extend(list2)
