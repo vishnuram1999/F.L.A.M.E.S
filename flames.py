@@ -26,5 +26,8 @@ if __name__ == '__main__':
     print("***********************Welcome to the Flames Calculator!***********************")
     name1 = input("Enter name 1: ")
     name2 = input("Enter name 2: ")
-    print("Result: ", flames(name1, name2))
+    if(name1 == name2):
+        print("Self Love")
+    else:
+        print("Relationship is ", flames(name1, name2))
     print("***********************Thank you for using the Flames Calculator!***********************")
